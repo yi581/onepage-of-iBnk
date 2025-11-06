@@ -102,189 +102,97 @@ export function HeroMinimal() {
         />
       </div>
 
-      {/* 烟雾效果层 */}
+      {/* 烟雾效果层 - 优化版本 */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* 烟雾粒子1 */}
         <motion.div
           className="absolute w-[400px] h-[400px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 40%, transparent 70%)',
-            filter: 'blur(40px)',
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 70%)',
+            filter: 'blur(50px)',
             bottom: '5%',
             left: '15%',
           }}
           animate={{
             y: [0, -600],
             x: [-30, 30, -30],
-            opacity: [0, 1, 0],
+            opacity: [0.2, 0.5, 0.2],
             scale: [0.8, 2, 2.5],
           }}
           transition={{
-            duration: 8,
+            duration: 12,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: [0.45, 0.05, 0.55, 0.95],
             delay: 0,
           }}
         />
-        
+
         {/* 烟雾粒子2 */}
         <motion.div
           className="absolute w-[450px] h-[450px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 40%, transparent 70%)',
-            filter: 'blur(45px)',
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.045) 40%, transparent 70%)',
+            filter: 'blur(55px)',
             bottom: '8%',
             left: '40%',
           }}
           animate={{
             y: [0, -650],
             x: [40, -40, 40],
-            opacity: [0, 1, 0],
+            opacity: [0.15, 0.45, 0.15],
             scale: [0.7, 2.2, 2.8],
           }}
           transition={{
-            duration: 10,
+            duration: 14,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
+            ease: [0.45, 0.05, 0.55, 0.95],
+            delay: 3,
           }}
         />
-        
+
         {/* 烟雾粒子3 */}
         <motion.div
           className="absolute w-[380px] h-[380px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.09) 40%, transparent 70%)',
-            filter: 'blur(38px)',
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 70%)',
+            filter: 'blur(48px)',
             bottom: '0%',
             right: '20%',
           }}
           animate={{
             y: [0, -700],
             x: [-35, 35, -35],
-            opacity: [0, 1, 0],
+            opacity: [0.18, 0.48, 0.18],
             scale: [0.9, 2.3, 3],
           }}
           transition={{
-            duration: 9,
+            duration: 13,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
+            ease: [0.45, 0.05, 0.55, 0.95],
+            delay: 1.5,
           }}
         />
-        
+
         {/* 烟雾粒子4 */}
         <motion.div
           className="absolute w-[420px] h-[420px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.07) 40%, transparent 70%)',
-            filter: 'blur(42px)',
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.035) 40%, transparent 70%)',
+            filter: 'blur(52px)',
             bottom: '10%',
             right: '10%',
           }}
           animate={{
             y: [0, -580],
             x: [25, -25, 25],
-            opacity: [0, 0.9, 0],
+            opacity: [0.2, 0.42, 0.2],
             scale: [0.75, 2.1, 2.6],
           }}
           transition={{
-            duration: 11,
+            duration: 15,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3,
-          }}
-        />
-        
-        {/* 烟雾粒子5 */}
-        <motion.div
-          className="absolute w-[360px] h-[360px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.095) 40%, transparent 70%)',
-            filter: 'blur(36px)',
-            bottom: '3%',
-            left: '55%',
-          }}
-          animate={{
-            y: [0, -620],
-            x: [-40, 40, -40],
-            opacity: [0, 0.95, 0],
-            scale: [0.85, 2.15, 2.7],
-          }}
-          transition={{
-            duration: 9.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.5,
-          }}
-        />
-        
-        {/* 烟雾粒子6 */}
-        <motion.div
-          className="absolute w-[390px] h-[390px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.075) 40%, transparent 70%)',
-            filter: 'blur(44px)',
-            bottom: '12%',
-            left: '70%',
-          }}
-          animate={{
-            y: [0, -640],
-            x: [35, -35, 35],
-            opacity: [0, 0.85, 0],
-            scale: [0.7, 2.05, 2.55],
-          }}
-          transition={{
-            duration: 10.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4,
-          }}
-        />
-        
-        {/* 烟雾粒子7 */}
-        <motion.div
-          className="absolute w-[410px] h-[410px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.155) 0%, rgba(255, 255, 255, 0.085) 40%, transparent 70%)',
-            filter: 'blur(41px)',
-            bottom: '6%',
-            left: '28%',
-          }}
-          animate={{
-            y: [0, -660],
-            x: [-28, 28, -28],
-            opacity: [0, 0.92, 0],
-            scale: [0.82, 2.18, 2.65],
-          }}
-          transition={{
-            duration: 8.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        />
-        
-        {/* 烟雾粒子8 */}
-        <motion.div
-          className="absolute w-[440px] h-[440px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.068) 40%, transparent 70%)',
-            filter: 'blur(46px)',
-            bottom: '4%',
-            right: '35%',
-          }}
-          animate={{
-            y: [0, -680],
-            x: [32, -32, 32],
-            opacity: [0, 0.88, 0],
-            scale: [0.78, 2.12, 2.72],
-          }}
-          transition={{
-            duration: 11.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2.5,
+            ease: [0.45, 0.05, 0.55, 0.95],
+            delay: 4.5,
           }}
         />
       </div>
